@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">YouTube Downloader</h1>
+        <form method="POST" action="/download" class="text-center">
+            <div class="form-group">
+                <label for="url">YouTube Video URL:</label>
+                <input type="text" name="url" id="url" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="format_video" name="format" value="video" class="form-check-input" checked>
+                    <label for="format_video" class="form-check-label">Download Video</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="format_audio" name="format" value="audio" class="form-check-input">
+                    <label for="format_audio" class="form-check-label">Download Audio</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Download</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
